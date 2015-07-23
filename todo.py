@@ -1,5 +1,5 @@
 import sqlite3
-from bottle import route, run, debug, template, request
+from bottle import route, run, debug, template, request, error
 
 @route('/todo')
 def todo_list():
@@ -16,7 +16,7 @@ def todo_list():
 def new_item():
     if request.GET.get('save','').strip():
         new = request.GET.get('task', '').strip()
-        conn = sqlite3.connect('todo.db')
+        conn = sqlite3.connect('todo_data.db')
         c = conn.cursor()
         c.execute("INSERT INTO todo (task,status) VALUES (?,?)", (new,1))
         new_id = c.lastrowid
@@ -46,6 +46,14 @@ def edit_item(no):
         c.execute("SELECT task FROM todo WHERE id LIKE ?", (str(no)))
         cur_data = c.fetchone()
         return template('edit_task', old=cur_data, no=no)
+
+@error(403)
+def mistake403(code):
+    return 'The parameter you passed has the wrong format!'
+
+@error(404)
+def mistake404(code):
+    return 'Sorry, this page does not exist!'
 
 debug(True)
 run(reloader=True)
