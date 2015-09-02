@@ -10,7 +10,6 @@ class Task:
         c = conn.cursor()
         c.execute("SELECT id, task FROM todo WHERE status LIKE '1'")
         result = c.fetchall()
-        #return str(result)
         c.close()
         output = template('make_table', rows=result)
         return output
@@ -54,5 +53,4 @@ class Task:
         print('\n '+str(no)+"\n")
         c.execute("DELETE FROM todo WHERE id LIKE %s" % (str(no)))
         conn.commit()
-        # redirect('/')
         return 'success deleting todo No%s' % str(no)
