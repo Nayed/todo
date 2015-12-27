@@ -2,8 +2,8 @@ import {ul, button, a, i, li, h4, form, input, div} from 'charata'
 
 export default class TodoList {
     constructor(list = []) {
-        this.list = {};
-        list.forEach(el => this.addItem(el))
+        this.list = {}
+        list.forEach(el => addItem(el))
     }
 
     addItem(text) {
@@ -19,8 +19,8 @@ export default class TodoList {
 
     _attachEvents() {
         let done_anchors = this.container.getElementsByTagName('a')
-        Array.prototype.forEach.call(done_anchors, (anchor) => {
-            anchor.addEventListener('click', (ev) => {
+        Array.prototype.forEach.call(done_anchors, anchor => {
+            anchor.addEventListener('click', ev => {
                 ev.preventDefault()
                 let idx = anchor.parentElement.parentElement.dataset.idx
                 this.removeItem(idx)

@@ -9,7 +9,7 @@ myList.render(todoContainer)
 
 let form = document.getElementById('add-todo')
 
-form.addEventListener('submit', (ev) => {
+form.addEventListener('submit', ev => {
     ev.preventDefault()
     let input = form.elements.namedItem('new-item')
     myList.addItem(input.value)
