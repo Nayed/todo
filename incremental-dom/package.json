@@ -1,0 +1,22 @@
+{
+  "name": "incremental-dom",
+  "version": "1.0.0",
+  "description": "todo app using incremental DOM API",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot --watch"
+  },
+  "author": "Nayed Saïd Ali",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-runtime": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-runtime": "^6.3.19",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "charata": "^0.2.0"
+  }
+}
