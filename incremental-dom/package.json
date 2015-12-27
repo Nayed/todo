@@ -17,6 +17,6 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "charata": "^0.2.0"
+    "charata": "0.1.3"
   }
 }
