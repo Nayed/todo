@@ -1,0 +1,18 @@
+{
+  "name": "react-typescript",
+  "version": "1.0.0",
+  "description": "famous todo app with react and typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nayed Saïd Ali",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "director": "^1.2.8",
+    "react": "^0.14.6",
+    "todomvc-app-css": "^2.0.4",
+    "todomvc-common": "^1.0.2"
+  }
+}
