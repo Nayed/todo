@@ -6,7 +6,7 @@ namespace app.components {
     export class TodoFooter extends React.Component<ITodoFooterProps, {}> {
 
         public render() {
-            var activeTodoWord = app.miscelanious.pluralize(this.props.count, 'item')
+            var activeTodoWord = app.miscelanious.Utils.pluralize(this.props.count, 'item')
             var clearButton = null
 
             if (this.props.completedCount > 0) {
